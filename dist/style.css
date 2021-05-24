@@ -27,6 +27,11 @@ a.btn {
   text-transform: uppercase;
 }
 
+.primary-btn,
+a.btn {
+  border-radius: 2px;
+}
+
 /*
 .primary-btn
 .secondary-btn
