@@ -196,12 +196,21 @@ input:hover {
   border: 1px solid #7c858f;
 }
 
+header {
+  background-image: url(/images/header-image-homepage.jpg?ae64d257ea801151a56cc1fc3a2bc168);
+  background-position: center;
+  background-size: cover;
+  padding: 13.3333333333px 0;
+}
+header .hero-text {
+  max-width: 50%;
+  margin-left: 10%;
+  padding: 100px 0;
+  color: white;
+}
+
 .nav-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
 }
@@ -227,17 +236,6 @@ input:hover {
 }
 .nav-header-container li a:hover {
   color: #3bafbf;
-}
-
-.hero {
-  background-image: url(/images/header-image-homepage.jpg?ae64d257ea801151a56cc1fc3a2bc168);
-  background-position: center;
-  background-size: cover;
-  padding: 200px;
-}
-.hero .hero-text {
-  max-width: 70%;
-  color: white;
 }
 
 section {

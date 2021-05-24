@@ -16,53 +16,54 @@
 <body>
     <div id="app">
         <header>
-            <div class="container nav-header">
-                <div class="logo-container">
-                    <img class="logo-img" src="public/imgs/avada-logo/medical_logo_2x_light.png" alt="avada logo">
+
+            <div class="container">
+                <div class="nav-header">
+                    <div class="logo-container">
+                        <img class="logo-img" src="public/imgs/avada-logo/medical_logo_2x_light.png" alt="avada logo">
+                    </div>
+        
+                    <nav class="nav-header-container">
+                        <ul>
+                            <li v-for="link in navLinksList">
+                                <a :href="link.link" :class="{btn: link.type === 'btn'}">
+                                    {{ link.text }}
+    
+                                    <!-- <ul v-if="link.childs">
+                                        <li v-for="childLink in link.childs">
+                                            <a :href="childLink.link">
+                                                {{ childLink.text }}
+                                            </a>
+                                        </li>
+                                    </ul> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
     
-                <nav class="nav-header-container">
-                    <ul>
-                        <li v-for="link in navLinksList">
-                            <a :href="link.link" :class="{btn: link.type === 'btn'}">
-                                {{ link.text }}
-
-                                <!-- <ul v-if="link.childs">
-                                    <li v-for="childLink in link.childs">
-                                        <a :href="childLink.link">
-                                            {{ childLink.text }}
-                                        </a>
-                                    </li>
-                                </ul> -->
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+                <div class="hero-text">
     
-        <main>
-            <div class="hero">
-                
-                <div class="hero-text container">
-
                     <h1>
                         Caring 
                         <span class="highlighted">For Life</span>
                     </h1>
-
+    
                     <p class="lead">
                         Kind words can be short and easy to speak, but their echoes are truly endless. Avada Health focuses on you as if it was our own family.
                     </p>
-
+    
                     <button class="primary-btn">
                         Learn more
                     </button>
-
+    
                 </div>
 
             </div>
 
+        </header>
+    
+        <main>
             <section id="section-1" class="light-bg">
                 <div class="container">
                     <div class="title-container">

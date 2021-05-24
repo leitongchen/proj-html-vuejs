@@ -1,10 +1,21 @@
-.nav-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+header {
+    background-image: url(../../public/imgs/bg-img/header-image-homepage.jpg);
+    background-position: center;
+    background-size: cover;
 
-    padding: $spacing;
+    padding: ($spacing/1.5) 0;
+
+    .hero-text {
+        max-width: 50%;
+        margin-left: 10%;
+        padding: ($spacing*5) 0;
+        color: white;
+    }
+}
+
+
+.nav-header {
+    height: 80px;
 
     display: flex;
     justify-content: space-between;
