@@ -18,19 +18,44 @@
   margin-right: auto;
 }
 
-h1, h2, h3, h4, h5, h6, p, span {
-  font-family: "Source Sans Pro", sans-serif;
+section .row {
+  display: flex;
+}
+section .row .col {
+  width: calc(100% / 4);
+  padding: 0 10px;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6, p, span {
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
-  font-size: 48px;
   margin-bottom: 20px;
 }
 
-p {
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
   font-size: 16px;
+}
+
+h6 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 12.3076923077px;
   font-weight: 300;
+}
+
+p.lead {
+  font-size: 16px;
 }
 
 .text-white {
@@ -213,4 +238,31 @@ input:hover {
 .hero .hero-text {
   max-width: 70%;
   color: white;
+}
+
+section {
+  text-align: center;
+  margin: 60px 0;
+}
+section.light-bg h1, section.light-bg h2, section.light-bg h3, section.light-bg h4, section.light-bg h5, section.light-bg h6 {
+  color: #333c4e;
+}
+section.light-bg p, section.light-bg span {
+  color: #747474;
+}
+section.dark-bg h1, section.dark-bg h2, section.dark-bg h3, section.dark-bg h4, section.dark-bg h5, section.dark-bg h6, section.dark-bg p, section.dark-bg span {
+  color: white;
+}
+
+.title-container {
+  width: 60%;
+  margin: auto;
+}
+
+#section-1 .row {
+  margin-top: 40px;
+}
+#section-1 .plus-row-img {
+  width: 20%;
+  margin-bottom: 20px;
 }
