@@ -9,6 +9,13 @@ a.btn {
     text-transform: uppercase;
 }
 
+// buttons classes available: 
+/*
+.primary-btn
+.secondary-btn
+.white-btn
+*/
+
 button {
     border: 0;
     padding: ($spacing/2) $spacing;
@@ -47,8 +54,15 @@ button {
     }
 }
 
+/* 
+use [.social-icon] for social networks
+use [.icon-${sn name}] as well for the associated color
+*/ 
 
-// buttons setup for social networks icon
+/* 
+Use [.btn] to links "a" for (primary) buttons appearance
+*/
+
 ul {
     @include reset-list;
 
@@ -62,6 +76,7 @@ ul {
         color: white;
     }
 
+    // buttons setup for social networks icon
     li a.social-icon {
         width: 30px;
         height: 30px;
@@ -81,7 +96,7 @@ ul {
         } 
     }
 
-    // setup for links similar to buttons
+    // setup for links "a" with (primary)buttons appearance
     li a.btn {
         padding: ($spacing/3) ($spacing/2);
         background-color: $primary-color;

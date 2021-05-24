@@ -26,6 +26,11 @@ a.btn {
   text-transform: uppercase;
 }
 
+/*
+.primary-btn
+.secondary-btn
+.white-btn
+*/
 button {
   border: 0;
   padding: 10px 20px;
@@ -57,6 +62,13 @@ button.white-btn:hover {
   color: white;
 }
 
+/* 
+use [.social-icon] for social networks
+use [.icon-${sn name}] as well for the associated color
+*/
+/* 
+Use [.btn] to links "a" for (primary) buttons appearance
+*/
 ul {
   list-style: none;
   margin: 0;
