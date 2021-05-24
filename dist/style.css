@@ -1,1 +1,108 @@
+/*****************************
+        FONTS STYLE
+*****************************/
+/*****************************
+        COLORS
+*****************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.bg-blue {
+  background-color: #3697c3;
+  padding: 20px;
+}
+
+button, a {
+  transition: background-color 0.5s;
+}
+
+button,
+a.btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+button {
+  border: 0;
+  padding: 10px 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+button.primary-btn {
+  background-color: #3bafbf;
+  color: white;
+}
+button.primary-btn:hover {
+  background-color: #00a8bf;
+}
+button.secondary-btn {
+  border: 2px solid white;
+  color: white;
+}
+button.secondary-btn:hover {
+  border: 0;
+  background-color: white;
+  color: #3697c3;
+}
+button.white-btn {
+  color: #333c4e;
+  border: 1px solid #333c4e;
+}
+button.white-btn:hover {
+  background-color: #86d0da;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+ul li, ul a {
+  display: inline-block;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+ul li a.social-icon {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+}
+ul .icon-youtube {
+  background-color: #cd201f;
+}
+ul .icon-youtube:hover {
+  background-color: #e23e3d;
+}
+ul .icon-instagram {
+  background-color: #3f729b;
+}
+ul .icon-instagram:hover {
+  background-color: #548cb9;
+}
+ul .icon-twitter {
+  background-color: #55acee;
+}
+ul .icon-twitter:hover {
+  background-color: #83c3f3;
+}
+ul .icon-facebook {
+  background-color: #3b5998;
+}
+ul .icon-facebook:hover {
+  background-color: #4c70ba;
+}
+ul li a.btn {
+  padding: 6.6666666667px 10px;
+  background-color: #3bafbf;
+}
+ul li a.btn:hover {
+  background-color: #00a8bf;
+}

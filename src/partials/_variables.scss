@@ -1,7 +1,47 @@
+$spacing: 20px;
+
+$set-transition: .5s;
+
+/*****************************
+        FONTS STYLE
+*****************************/
 
 // FONT for titles, texts
 $primary-font-stack: 'Source Sans Pro', sans-serif;
 
 // FONT for buttons, links / footer titles
 $secondary-font-stack: 'Montserrat', sans-serif;
+
+$font-size: 16px;
+$line-height: 1;
+
+
+/*****************************
+        COLORS
+*****************************/
+$primary-color: #3bafbf;
+
+$hover-color: #00a8bf;
+
+
+$title-color: #333c4e;
+$text-color: #747474;
+
+// background colours
+$bg-light-gray: #f7f7f7;
+
+$bg-blue-1: #3697c3;
+$bg-blue-2: #327ec7;
+
+// icons logo colours 
+// $logo-yt-color: #cd201f; 
+// $logo-ig-color: #3f729b;
+// $logo-twitter-color: #55acee;
+// $logo-fb-color: #3b5998;
+
+$sm-logo-colors: 
+    ("youtube": #cd201f,
+    "instagram": #3f729b,
+    "twitter": #55acee,
+    "facebook": #3b5998);
 

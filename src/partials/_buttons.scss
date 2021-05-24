@@ -1,0 +1,93 @@
+button, a {
+    transition: background-color $set-transition;
+}
+
+button, 
+a.btn {
+    font-family: $secondary-font-stack;
+    font-size: $font-size/2;
+    text-transform: uppercase;
+}
+
+button {
+    border: 0;
+    padding: ($spacing/2) $spacing;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    &.primary-btn {
+        background-color: $primary-color;
+        color: white;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+
+    &.secondary-btn {
+        border: 2px solid white;
+        color: white;
+
+        &:hover {
+            border: 0;
+            background-color: white;
+            color: $bg-blue-1;
+        }
+    }
+
+    &.white-btn {
+        color: $title-color;
+        border: 1px solid $title-color;
+
+        &:hover {
+            background-color: lighten($primary-color, 20%);
+            color: white;
+        }
+    }
+}
+
+
+// buttons setup for social networks icon
+ul {
+    @include reset-list;
+
+    li, a {
+
+        display: inline-block;
+    }
+
+    li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    li a.social-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+
+        border-radius: 5px;
+    }
+    // cycle assigning the right color for each social network link
+    @each $logo, $color in $sm-logo-colors {
+        .icon-#{$logo} {
+            background-color: $color;
+
+            &:hover {
+                background-color: lighten($color, 10%);
+            }
+        } 
+    }
+
+    // setup for links similar to buttons
+    li a.btn {
+        padding: ($spacing/3) ($spacing/2);
+        background-color: $primary-color;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}
