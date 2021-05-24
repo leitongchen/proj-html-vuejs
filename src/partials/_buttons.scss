@@ -54,6 +54,15 @@ button {
     }
 }
 
+.btn-container {
+    height: 37px;
+    
+    display: flex;
+    align-items: center
+}
+
+
+
 /* 
 use [.social-icon] for social networks
 use [.icon-${sn name}] as well for the associated color

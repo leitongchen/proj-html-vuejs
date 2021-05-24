@@ -4,6 +4,7 @@
 /*****************************
         COLORS
 *****************************/
+/* INPUTS */
 * {
   margin: 0;
   padding: 0;
@@ -62,6 +63,12 @@ button.white-btn:hover {
   color: white;
 }
 
+.btn-container {
+  height: 37px;
+  display: flex;
+  align-items: center;
+}
+
 /* 
 use [.social-icon] for social networks
 use [.icon-${sn name}] as well for the associated color
@@ -117,4 +124,20 @@ ul li a.btn {
 }
 ul li a.btn:hover {
   background-color: #00a8bf;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  padding: 10px 6.6666666667px;
+  border: 1px solid #88acab;
+  height: 36px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 8px;
+}
+input:hover {
+  border: 1px solid #7c858f;
 }

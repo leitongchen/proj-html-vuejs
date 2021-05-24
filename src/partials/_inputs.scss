@@ -1,0 +1,17 @@
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    padding: ($spacing/2) ($spacing/3);
+    border: 1px solid $input-color;
+    height: 36px;
+
+    font-family: $primary-font-stack;
+    font-size: $font-size/2;
+
+    &:hover {
+        border: 1px solid $input-hover;
+    }
+}
