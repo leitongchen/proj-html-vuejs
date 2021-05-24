@@ -14,66 +14,108 @@
     <title>Avada Health</title>
 </head> 
 <body>
+    <div id="app">
+        <header>
+            <div class="container nav-header">
+                <div class="logo-container">
+                    <img class="logo-img" src="public/imgs/avada-logo/medical_logo_2x_light.png" alt="avada logo">
+                </div>
+    
+                <nav class="nav-header-container">
+                    <ul>
+                        <li v-for="link in navLinksList">
+                            <a :href="link.link" :class="{btn: link.type === 'btn'}">
+                                {{ link.text }}
 
-    <header>
-
-
-    </header>
-
-    <main>
-
-
-
-        
-        <div>
-            <div class="btn-container">
-                <button class="primary-btn">
-                    make appointment
-                </button>
+                                <!-- <ul v-if="link.childs">
+                                    <li v-for="childLink in link.childs">
+                                        <a :href="childLink.link">
+                                            {{ childLink.text }}
+                                        </a>
+                                    </li>
+                                </ul> -->
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <div class="btn-container">
-                <button class="white-btn">
-                    make appointment
-                </button>
+        </header>
+    
+        <main>
+            <div class="hero">
+                
+                <div class="hero-text">
+
+                    <h1>
+                        Caring 
+                        <span class="highlighted">For Life</span>
+                    </h1>
+
+                    <p>
+                        Kind words can be short and easy to speak, but their echoes are truly endless. Avada Health focuses on you as if it was our own family.
+                    </p>
+
+                    <button class="primary-btn">
+                        Learn more
+                    </button>
+
+                </div>
+
             </div>
-            <div class="bg-blue">
+    
+    
+    
+    
+            <!-- <div>
                 <div class="btn-container">
-                    <button class="secondary-btn">
+                    <button class="primary-btn">
                         make appointment
                     </button>
                 </div>
-    
-            </div>
-            
-            <ul>
-                <li>
-                    <a class="social-icon icon-twitter" href="#">
-                        T
-                    </a>
-                </li>
-
-                <li>
-                    <a class="btn" href="#">
-                        Prendi un appuntamento
-                    </a>
-                </li>
-            </ul>
-            <form action="">
-                <input type="text" name="name" id="" placeholder="Name" required>
-                <input type="text" name="email" id="" placeholder="Email" required>
-                <input type="number" name="phone" id="" placeholder="Phone Number" required>
-                <input type="date" name="date" id="" placeholder="Appointment date" required>
-
+                <div class="btn-container">
+                    <button class="white-btn">
+                        make appointment
+                    </button>
+                </div>
+                <div class="bg-blue">
+                    <div class="btn-container">
+                        <button class="secondary-btn">
+                            make appointment
+                        </button>
+                    </div>
+        
+                </div>
                 
-                <button class="primary-btn">Make an appointment</button>
-            </form>
-        </div>
-    </main>
-
-    <footer>
-
-
-    </footer>
+                <ul>
+                    <li>
+                        <a class="social-icon icon-twitter" href="#">
+                            T
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a class="btn" href="#">
+                            Prendi un appuntamento
+                        </a>
+                    </li>
+                </ul>
+                <form action="">
+                    <input type="text" name="name" id="" placeholder="Name" required>
+                    <input type="text" name="email" id="" placeholder="Email" required>
+                    <input type="number" name="phone" id="" placeholder="Phone Number" required>
+                    <input type="date" name="date" id="" placeholder="Appointment date" required>
+    
+                    
+                    <button class="primary-btn">Make an appointment</button>
+                </form>
+            </div> -->
+        </main>
+    
+        <footer>
+    
+    
+        </footer>
+    </div>
 
     <script src="scripts/app.js"></script>
 </body>

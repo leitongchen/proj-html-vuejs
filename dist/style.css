@@ -11,13 +11,34 @@
   box-sizing: border-box;
 }
 
-.bg-blue {
-  background-color: #3697c3;
-  padding: 20px;
+.container {
+  width: 920px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-button, a {
-  transition: background-color 0.5s;
+h1, h2, h3, h4, h5, h6, p, span {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.text-white {
+  color: white;
+}
+
+.highlighted {
+  color: #3bafbf;
 }
 
 button,
@@ -25,6 +46,7 @@ a.btn {
   font-family: "Montserrat", sans-serif;
   font-size: 8px;
   text-transform: uppercase;
+  transition: background-color 0.3s;
 }
 
 .primary-btn,
@@ -41,6 +63,7 @@ button {
   border: 0;
   padding: 10px 20px;
   background-color: transparent;
+  margin: 20px 0;
   cursor: pointer;
 }
 button.primary-btn {
@@ -129,6 +152,7 @@ ul li a.btn {
 }
 ul li a.btn:hover {
   background-color: #00a8bf;
+  color: white;
 }
 
 form {
@@ -145,4 +169,48 @@ input {
 }
 input:hover {
   border: 1px solid #7c858f;
+}
+
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container {
+  min-width: 100px;
+  max-width: 20%;
+}
+.logo-container img.logo-img {
+  width: 100%;
+}
+
+.nav-header-container {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10.6666666667px;
+  text-transform: uppercase;
+}
+.nav-header-container li {
+  margin: 0 10px;
+}
+.nav-header-container li a {
+  transition: color 0.3s, background-color 0.3s;
+}
+.nav-header-container li a:hover {
+  color: #3bafbf;
+}
+
+.hero {
+  background-image: url(/images/header-image-homepage.jpg?ae64d257ea801151a56cc1fc3a2bc168);
+  background-position: center;
+  background-size: cover;
+  padding: 200px;
+}
+.hero .hero-text {
+  max-width: 70%;
+  color: white;
 }

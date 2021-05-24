@@ -1,5 +1,4 @@
 button, a {
-    transition: background-color $set-transition;
 }
 
 button, 
@@ -7,6 +6,7 @@ a.btn {
     font-family: $secondary-font-stack;
     font-size: $font-size/2;
     text-transform: uppercase;
+    transition: background-color $set-transition;
 }
 
 .primary-btn, 
@@ -26,6 +26,7 @@ button {
     padding: ($spacing/2) $spacing;
     background-color: transparent;
 
+    margin: $spacing 0;
     cursor: pointer;
 
     &.primary-btn {
@@ -117,6 +118,7 @@ ul {
 
         &:hover {
             background-color: $hover-color;
+            color: white;
         }
     }
 }

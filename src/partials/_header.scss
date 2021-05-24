@@ -1,0 +1,37 @@
+.nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: $spacing;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-container {
+    min-width: 100px;
+    max-width: 20%;
+
+    img.logo-img {
+        width: 100%;
+    }
+}
+
+.nav-header-container {
+
+    font-family: $secondary-font-stack;
+    font-size: $font-size/1.5;
+    text-transform: uppercase;
+
+    li {
+        margin: 0 $spacing/2;
+        a {
+            transition: color $set-transition, background-color $set-transition;
+        }
+        a:hover {
+            color: $primary-color;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.hero {
+    background-image: url(../../public/imgs/bg-img/header-image-homepage.jpg);
+    background-position: center;
+    background-size: cover;
+
+    padding: 200px;
+
+    .hero-text {
+        max-width: 70%;
+        color: white;
+    }
+}

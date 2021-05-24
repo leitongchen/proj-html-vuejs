@@ -4,7 +4,42 @@
     box-sizing: border-box;
 }
 
-.bg-blue {
-    background-color: $bg-blue-1;
-    padding: $spacing;
+.container {
+    width: 920px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
 }
+
+h1, h2, h3, h4, h5, h6, p, span {
+    font-family: $primary-font-stack;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: $font-size*3;
+
+    margin-bottom: $spacing;
+}
+
+p, span {
+    
+}
+
+p {
+    font-size: $font-size;
+    font-weight: 300;
+}
+
+.text-white {
+    color: white;
+}
+
+.highlighted {
+    color: $primary-color;
+}
+// .bg-blue {
+//     background-color: $bg-blue-1;
+//     padding: $spacing;
+// }
