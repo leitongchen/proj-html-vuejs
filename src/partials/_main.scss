@@ -1,7 +1,7 @@
 
 section {
     text-align: center;
-    margin: ($spacing*3) 0;
+    padding: ($spacing*3) 0;
 
     &.light-bg {
 
@@ -32,5 +32,41 @@ section {
     .plus-row-img {
         width: 20%;
         margin-bottom: $spacing;
+    }
+}
+
+#section-2 {
+    background-color: $bg-light-gray;
+
+    .doctor-file {
+        display: flex;
+        flex-direction: column;
+    }
+    .photo-container {
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform $set-transition;
+
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 2px 2px 16px -1px lighten($text-color, 30%);
+            }
+        }
+    }
+    .box-below {
+        background-color: white;
+        padding: ($spacing);
+        text-align: left;
+
+        .lowercase {
+            text-transform: capitalize;
+        }
+
     }
 }

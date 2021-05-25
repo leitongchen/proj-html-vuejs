@@ -12,8 +12,8 @@
 }
 
 .container {
-  width: 920px;
-  max-width: 100%;
+  width: 1200px;
+  max-width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -21,15 +21,60 @@
 section .row {
   display: flex;
 }
-section .row .col {
-  width: calc(100% / 4);
-  padding: 0 10px;
+section .row .col-1 {
+  width: 100%;
+  padding: 0 20px;
+}
+section .row .col-2 {
+  width: 50%;
+  padding: 0 20px;
+}
+section .row .col-3 {
+  width: 33.3333333333%;
+  padding: 0 20px;
+}
+section .row .col-4 {
+  width: 25%;
+  padding: 0 20px;
+}
+section .row .col-5 {
+  width: 20%;
+  padding: 0 20px;
+}
+section .row .col-6 {
+  width: 16.6666666667%;
+  padding: 0 20px;
+}
+section .row .col-7 {
+  width: 14.2857142857%;
+  padding: 0 20px;
+}
+section .row .col-8 {
+  width: 12.5%;
+  padding: 0 20px;
+}
+section .row .col-9 {
+  width: 11.1111111111%;
+  padding: 0 20px;
+}
+section .row .col-10 {
+  width: 10%;
+  padding: 0 20px;
+}
+section .row .col-11 {
+  width: 9.0909090909%;
+  padding: 0 20px;
+}
+section .row .col-12 {
+  width: 8.3333333333%;
+  padding: 0 20px;
 }
 
 h1, h2, h3, h4, h5, h6, p, span {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   margin-bottom: 20px;
+  line-height: 1.8;
 }
 
 h1 {
@@ -38,9 +83,22 @@ h1 {
 
 h2 {
   font-size: 32px;
+  text-transform: uppercase;
+}
+
+.underline {
+  border-bottom: 1px solid #747474;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 
 h3 {
+  font-size: 32px;
+}
+
+h4 {
   font-size: 16px;
 }
 
@@ -69,7 +127,7 @@ p.lead {
 button,
 a.btn {
   font-family: "Montserrat", sans-serif;
-  font-size: 8px;
+  font-size: 11.4285714286px;
   text-transform: uppercase;
   transition: background-color 0.3s;
 }
@@ -146,6 +204,10 @@ ul li a.social-icon {
   line-height: 30px;
   text-align: center;
   border-radius: 5px;
+  margin-right: 10px;
+}
+ul li a.social-icon .fab, ul li a.social-icon .fa, ul li a.social-icon .fas, ul li a.social-icon .far {
+  line-height: inherit;
 }
 ul .icon-youtube {
   background-color: #cd201f;
@@ -165,10 +227,10 @@ ul .icon-twitter {
 ul .icon-twitter:hover {
   background-color: #83c3f3;
 }
-ul .icon-facebook {
+ul .icon-facebook-f {
   background-color: #3b5998;
 }
-ul .icon-facebook:hover {
+ul .icon-facebook-f:hover {
   background-color: #4c70ba;
 }
 ul li a.btn {
@@ -177,7 +239,7 @@ ul li a.btn {
 }
 ul li a.btn:hover {
   background-color: #00a8bf;
-  color: white;
+  color: black;
 }
 
 form {
@@ -200,7 +262,7 @@ header {
   background-image: url(/images/header-image-homepage.jpg?ae64d257ea801151a56cc1fc3a2bc168);
   background-position: center;
   background-size: cover;
-  padding: 13.3333333333px 0;
+  padding: 20px 0;
 }
 header .hero-text {
   max-width: 50%;
@@ -225,7 +287,7 @@ header .hero-text {
 
 .nav-header-container {
   font-family: "Montserrat", sans-serif;
-  font-size: 10.6666666667px;
+  font-size: 13.3333333333px;
   text-transform: uppercase;
 }
 .nav-header-container li {
@@ -240,7 +302,7 @@ header .hero-text {
 
 section {
   text-align: center;
-  margin: 60px 0;
+  padding: 60px 0;
 }
 section.light-bg h1, section.light-bg h2, section.light-bg h3, section.light-bg h4, section.light-bg h5, section.light-bg h6 {
   color: #333c4e;
@@ -263,4 +325,32 @@ section.dark-bg h1, section.dark-bg h2, section.dark-bg h3, section.dark-bg h4, 
 #section-1 .plus-row-img {
   width: 20%;
   margin-bottom: 20px;
+}
+
+#section-2 {
+  background-color: #f7f7f7;
+}
+#section-2 .doctor-file {
+  display: flex;
+  flex-direction: column;
+}
+#section-2 .photo-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+#section-2 .photo-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 16px -1px #c1c1c1;
+}
+#section-2 .box-below {
+  background-color: white;
+  padding: 20px;
+  text-align: left;
+}
+#section-2 .box-below .lowercase {
+  text-transform: capitalize;
 }

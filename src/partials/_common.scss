@@ -5,8 +5,8 @@
 }
 
 .container {
-    width: 920px;
-    max-width: 100%;
+    width: 1200px;
+    max-width: 95%;
     margin-left: auto;
     margin-right: auto;
 
@@ -17,9 +17,13 @@ section {
     .row {
         display: flex;
 
-        .col {
-            width: calc(100% / 4);
-            padding: 0 ($spacing/2);
+        @for $i from 1 through 12 {
+            $width: percentage(1 / $i);
+          
+            .col-#{$i} {
+              width: $width;
+              padding: 0 $spacing;
+            }
         }
     }
 
@@ -29,6 +33,8 @@ h1, h2, h3, h4, h5, h6, p, span {
     font-family: $primary-font-stack;
     font-weight: 300;
     margin-bottom: $spacing;
+    line-height: $line-height*1.8;
+
 
 }
 
@@ -38,9 +44,22 @@ h1 {
 
 h2 {
     font-size: $font-size*2;
+    text-transform: uppercase;
+}
+
+.underline {
+    border-bottom: 1px solid $text-color;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $spacing;
 }
 
 h3 {
+    font-size: $font-size*2;
+}
+
+h4 {
     font-size: $font-size;
 }
 

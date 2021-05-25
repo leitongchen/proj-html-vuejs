@@ -67,16 +67,16 @@
             <section id="section-1" class="light-bg">
                 <div class="container">
                     <div class="title-container">
-                        <h2>
-                            Welcome to Avada Health
-                        </h2>
                         <h3>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda in mollitia voluptas. Libero eos natus aut.
+                            Welcome to Avada Health
                         </h3>
+                        <h4>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda in mollitia voluptas. Libero eos natus aut.
+                        </h4>
                     </div>
 
                     <div class="row">
-                        <div class="col">
+                        <div class="col-3">
 
                             <img class="plus-row-img" src="public/imgs/sections-icons/icon-1.png" alt="icon emergency phone">
 
@@ -85,7 +85,7 @@
                                 Sed ut perspiciatis unde omnis iste natus error sit voluptam accusantim.
                             </p>
                         </div>
-                        <div class="col">
+                        <div class="col-3">
 
                             <img class="plus-row-img" src="public/imgs/sections-icons/icon-2.png" alt="icon bed">
 
@@ -95,7 +95,7 @@
                             </p>
 
                         </div>
-                        <div class="col">
+                        <div class="col-3">
 
                             <img class="plus-row-img" src="public/imgs/sections-icons/icon-3.png" alt="icon expert doctors">
 
@@ -105,7 +105,7 @@
                             </p>
 
                         </div>
-                        <div class="col">
+                        <div class="col-3">
 
                             <img class="plus-row-img" src="public/imgs/sections-icons/icon-4.png" alt="icon microscope">
 
@@ -115,11 +115,55 @@
                             </p>
 
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section-2" class="light-bg">
+                <div class="container">
+
+                    <div class="title-container">
+                        <img src="public/imgs/sections-icons/icon-5.png" alt="doctor icon">
+                        <h2>
+                            Meet our doctors
+                        </h2>
+                        <div class="underline">
+                        </div>
+                        <h4>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div v-for="doctor in ourDoctors" :class="'col-' + ourDoctors.length" class="doctor-file">
+                            <div class="photo-container">
+                                <img :src="'public/imgs/our-doctors/' + doctor.photo" :alt="'Doctor ' + doctor.name">
+                            </div>
+                            <div class="box-below">
+                                <h6>
+                                    {{ doctor.department }} <br>
+                                    <span class="lowercase">
+                                        {{ doctor.name }}
+                                    </span> 
+                                </h6>
+                                <p>
+                                    {{ doctor.description }}
+                                </p>
+
+                                <ul v-if="doctor.socialLinks">
+                                    <li v-for="social in doctor.socialLinks">
+                                        <a :href="social.link" :class="'social-icon icon-' + social.text">
+                                            <i :class="'fab fa-' + social.text"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
                 </div>
-
             </section>
     
     

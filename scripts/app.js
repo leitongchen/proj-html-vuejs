@@ -44,7 +44,69 @@ const app = new Vue({
                 link: "#",
                 type: "btn",
             },            
-        ]
+        ],
+        ourDoctors: [
+            {
+                name: "Jon Snow",
+                department: "Anesthesiologist",
+                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.",
+                photo: "doctor-1.jpg",
+                socialLinks: [
+                    {
+                        text: "facebook-f", 
+                        link: "#"
+                    },
+                    {
+                        text: "twitter", 
+                        link: "#"
+                    },
+                    {
+                        text: "instagram", 
+                        link: "#"
+                    },
+                ]
+            },
+            {
+                name: "Toni Stark",
+                department: "Cardiologist",
+                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.",
+                photo: "doctor-2.jpg",
+                socialLinks: [
+                    {
+                        text: "facebook-f", 
+                        link: "#"
+                    },
+                    {
+                        text: "twitter", 
+                        link: "#"
+                    },
+                    {
+                        text: "instagram", 
+                        link: "#"
+                    },
+                ]
+            },
+            {
+                name: "Anna Smith",
+                department: "Nurse Practitioner",
+                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.",
+                photo: "doctor-3.jpg",
+                socialLinks: [
+                    {
+                        text: "facebook-f", 
+                        link: "#"
+                    },
+                    {
+                        text: "twitter", 
+                        link: "#"
+                    },
+                    {
+                        text: "instagram", 
+                        link: "#"
+                    },
+                ]
+            },
+        ],
 
     },
     methods: {
