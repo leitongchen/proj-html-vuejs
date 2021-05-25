@@ -25,18 +25,28 @@
         
                     <nav class="nav-header-container">
                         <ul>
-                            <li v-for="link in navLinksList">
+                            <li class="single-link" 
+                            v-for="link in navLinksList" 
+                            @click="onLinkClick($event)"
+                            v-on:blur="focusLost($event)"
+                            tabindex="0">
+
+
                                 <a :href="link.link" :class="{btn: link.type === 'btn'}">
                                     {{ link.text }}
-    
-                                    <!-- <ul v-if="link.childs">
+
+                                    <i v-if="link.childs" class="fas fa-chevron-down"></i>
+                                </a>
+                                <div v-if="link.childs" :class="{hidden: !childMenu}">
+                                    <ul class="child-menu">
                                         <li v-for="childLink in link.childs">
                                             <a :href="childLink.link">
                                                 {{ childLink.text }}
                                             </a>
                                         </li>
-                                    </ul> -->
-                                </a>
+                                    </ul>
+                                </div>
+
                             </li>
                         </ul>
                     </nav>

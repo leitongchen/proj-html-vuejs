@@ -196,12 +196,25 @@ const app = new Vue({
                 name: "Ultrasound Echocardiogram",
                 link: "#",
             },
-        ]
+        ],
+
+        childMenu: false,
 
     },
     methods: {
-
-
+        onLinkClick(event) {
+            console.log("apre")
+            this.childMenu = !this.childMenu;
+            if (this.childMenu) {
+                event.currentTarget.focus()
+            }
+        },
+        focusLost(event) {
+            console.log("chiude")
+            
+            this.childMenu = false; 
+            
+        }
     }
 
 })

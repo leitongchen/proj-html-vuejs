@@ -363,14 +363,49 @@ header .hero-text {
   font-size: 13.3333333333px;
   text-transform: uppercase;
 }
-.nav-header-container li {
-  margin: 0 10px;
+.nav-header-container li.single-link {
+  position: relative;
 }
 .nav-header-container li a {
+  display: inline-block;
+  padding: 5px 40px 5px 0;
   transition: color 0.3s, background-color 0.3s;
+}
+.nav-header-container li a i {
+  font-weight: 600;
+  font-size: 4px;
+  margin-left: 5px;
 }
 .nav-header-container li a:hover {
   color: #3bafbf;
+}
+.nav-header-container li .child-menu {
+  position: absolute;
+  top: 26px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+.nav-header-container li .child-menu li {
+  min-width: 150px;
+  background-color: white;
+  margin: 0;
+}
+.nav-header-container li .child-menu li a {
+  width: 100%;
+  color: #747474;
+  text-transform: capitalize;
+  font-size: 10.6666666667px;
+  padding: 13.3333333333px 10px;
+}
+.nav-header-container li .child-menu li a:hover {
+  color: white;
+}
+.nav-header-container li .child-menu li:hover {
+  background-color: #3bafbf;
+}
+.nav-header-container li .hidden {
+  display: none;
 }
 
 section {
