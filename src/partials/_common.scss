@@ -16,13 +16,23 @@ section {
 
     .row {
         display: flex;
-
+        flex-wrap: wrap;
         @for $i from 1 through 12 {
             $width: percentage(1 / $i);
           
             .col-#{$i} {
               width: $width;
               padding: 0 $spacing;
+            }
+        }
+
+        h6 {
+
+            transition: color $set-transition;
+            cursor: pointer;
+    
+            &:hover {
+                color: $primary-color;
             }
         }
     }

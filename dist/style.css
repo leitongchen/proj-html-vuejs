@@ -20,6 +20,7 @@
 
 section .row {
   display: flex;
+  flex-wrap: wrap;
 }
 section .row .col-1 {
   width: 100%;
@@ -68,6 +69,13 @@ section .row .col-11 {
 section .row .col-12 {
   width: 8.3333333333%;
   padding: 0 20px;
+}
+section .row h6 {
+  transition: color 0.3s;
+  cursor: pointer;
+}
+section .row h6:hover {
+  color: #3bafbf;
 }
 
 h1, h2, h3, h4, h5, h6, p, span {
@@ -353,4 +361,8 @@ section.dark-bg h1, section.dark-bg h2, section.dark-bg h3, section.dark-bg h4, 
 }
 #section-2 .box-below .lowercase {
   text-transform: capitalize;
+}
+
+#section-3 .services-box {
+  padding: 20px 0;
 }

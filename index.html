@@ -76,7 +76,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-4">
 
                             <img class="plus-row-img" src="public/imgs/sections-icons/icon-1.png" alt="icon emergency phone">
 
@@ -85,7 +85,7 @@
                                 Sed ut perspiciatis unde omnis iste natus error sit voluptam accusantim.
                             </p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
 
                             <img class="plus-row-img" src="public/imgs/sections-icons/icon-2.png" alt="icon bed">
 
@@ -95,7 +95,7 @@
                             </p>
 
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
 
                             <img class="plus-row-img" src="public/imgs/sections-icons/icon-3.png" alt="icon expert doctors">
 
@@ -105,7 +105,7 @@
                             </p>
 
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
 
                             <img class="plus-row-img" src="public/imgs/sections-icons/icon-4.png" alt="icon microscope">
 
@@ -134,7 +134,7 @@
                     </div>
 
                     <div class="row">
-                        <div v-for="doctor in ourDoctors" :class="'col-' + ourDoctors.length" class="doctor-file">
+                        <div v-for="doctor in ourDoctors" class="col-3" class="doctor-file">
                             <div class="photo-container">
                                 <img :src="'public/imgs/our-doctors/' + doctor.photo" :alt="'Doctor ' + doctor.name">
                             </div>
@@ -165,6 +165,40 @@
 
                 </div>
             </section>
+            <section id="section-3" class="light-bg">
+                <div class="container">
+
+                    <div class="title-container">
+                        <img src="public/imgs/sections-icons/icon-6.png" alt="heart cardio icon">
+                        <h2>
+                            Our health services
+                        </h2>
+                        <div class="underline">
+                        </div>
+                        <h4>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                        </h4>
+                    </div>
+
+                    <div class="row">
+
+                        <div v-for="service in healthServices" class="col-3 services-box">
+                            <img :src="'public/imgs/services-icons/icon-' + service.icon" :alt="service.name">
+
+                            <h6>
+                                {{ service.name }}
+                            </h6>
+                            <p>
+                                {{ service.description }}
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            
     
     
     

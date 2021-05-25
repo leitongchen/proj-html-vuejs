@@ -107,6 +107,38 @@ const app = new Vue({
                 ]
             },
         ],
+        healthServices: [
+            {
+                icon: "14.png",
+                name: "Rehabilitation Center",
+                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.",
+            },
+            {
+                icon: "15.png",
+                name: "Dental Implants",
+                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.",
+            },
+            {
+                icon: "16.png",
+                name: "Medicine Research",
+                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.",
+            },
+            {
+                icon: "11.png",
+                name: "Blood Bank",
+                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.",
+            },
+            {
+                icon: "12.png",
+                name: "Pharmaceutical advice",
+                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.",
+            },
+            {
+                icon: "13.png",
+                name: "Medical Counseling",
+                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.",
+            },
+        ],
 
     },
     methods: {
