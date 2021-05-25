@@ -1,5 +1,5 @@
 button, 
-a.btn {
+a.btn, a {
     font-family: $secondary-font-stack;
     font-size: $font-size/1.4;
     text-transform: uppercase;
@@ -35,6 +35,24 @@ button {
         }
     }
 
+}
+
+// link with button appearance
+
+a.link {
+    padding: ($spacing/2) $spacing;
+    background-color: transparent;
+    text-decoration: none;
+
+    &.primary-btn {
+        background-color: $primary-color;
+        color: white;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+
     &.secondary-btn {
         border: 2px solid white;
         color: white;
@@ -55,7 +73,9 @@ button {
             color: white;
         }
     }
+
 }
+
 
 .btn-container {
     height: 37px;
@@ -122,7 +142,7 @@ ul {
 
         &:hover {
             background-color: $hover-color;
-            color: black;
+            color: white;
         }
     }
 }

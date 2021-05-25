@@ -52,11 +52,11 @@
                     <p class="lead">
                         Kind words can be short and easy to speak, but their echoes are truly endless. Avada Health focuses on you as if it was our own family.
                     </p>
-    
-                    <button class="primary-btn">
+                    
+                    <a href="#" class="primary-btn link">
                         Learn more
-                    </button>
-    
+                    </a>
+                 
                 </div>
 
             </div>
@@ -126,8 +126,8 @@
                         <h2>
                             Meet our doctors
                         </h2>
-                        <div class="underline">
-                        </div>
+                        <span class="underline">
+                        </span>
                         <h4>
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
                         </h4>
@@ -173,8 +173,8 @@
                         <h2>
                             Our health services
                         </h2>
-                        <div class="underline">
-                        </div>
+                        <span class="underline">
+                        </span>
                         <h4>
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
                         </h4>
@@ -205,8 +205,8 @@
                         <h2>
                             Tour our facilities
                         </h2>
-                        <div class="underline white">
-                        </div>
+                        <span class="underline white">
+                        </span>
                         <h4>
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
                         </h4>
@@ -228,9 +228,9 @@
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque.
                         </p>
                         <div class="btn-container">
-                            <button class="secondary-btn">
+                            <a href="#" class="secondary-btn link">
                                 Learn More
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="col-3 bg-color-2">
@@ -242,9 +242,9 @@
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque.
                         </p>
                         <div class="btn-container">
-                            <button class="secondary-btn">
+                            <a href="#" class="secondary-btn link">
                                 Learn More
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="col-3 bg-color-3">
@@ -256,9 +256,9 @@
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque.
                         </p>
                         <div class="btn-container">
-                            <button class="secondary-btn">
+                            <a href="#" class="secondary-btn link">
                                 Learn More
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -270,8 +270,8 @@
                         <h3 class="capitalize">
                             Make an appointment
                         </h3>
-                        <div class="underline white">
-                        </div>
+                        <span class="underline white">
+                        </span>
                         <h4>
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
                         </h4>
@@ -303,58 +303,86 @@
 
                 </div>
             </section>
-            
-    
-    
-    
-            <!-- <div>
-                <div class="btn-container">
-                    <button class="primary-btn">
-                        make appointment
-                    </button>
-                </div>
-                <div class="btn-container">
-                    <button class="white-btn">
-                        make appointment
-                    </button>
-                </div>
-                <div>
-                    <div class="btn-container">
-                        <button class="secondary-btn">
-                            make appointment
-                        </button>
-                    </div>
-        
-                </div>
-                
-                <ul>
-                    <li>
-                        <a class="social-icon icon-twitter" href="#">
-                            T
-                        </a>
-                    </li>
-    
-                    <li>
-                        <a class="btn" href="#">
-                            Prendi un appuntamento
-                        </a>
-                    </li>
-                </ul>
-                <form action="">
-                    <input type="text" name="name" id="" placeholder="Name" required>
-                    <input type="text" name="email" id="" placeholder="Email" required>
-                    <input type="number" name="phone" id="" placeholder="Phone Number" required>
-                    <input type="date" name="date" id="" placeholder="Appointment date" required>
-    
-                    
-                    <button class="primary-btn">Make an appointment</button>
-                </form>
-            </div> -->
+
         </main>
     
         <footer>
-    
-    
+            <div class="container light-bg">
+                <div class="row">
+
+                    <div class="col-3">
+                        
+                        <div class="logo-container title-box">
+                            <img class="logo-img" src="public/imgs/avada-logo/medical_logo_2x_dark.png" alt="avada logo">
+                        </div>
+
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolemue launti totam aperiam, eaque ipsa quae abillo. Invente veriatis et quasi architecto beatae luptatem accusantium, remaperiamsiat. Voluptatem accusest etsium doloremque laudaien. Lorem ipsum sits dolores ets unser.
+                        </p>
+
+                        <h6>
+                            Learn more about us
+                        </h6>
+
+                        <ul>
+                            <li v-for="social in socialLinkList">
+                                <a :href="social.link" :class="'social-icon icon-' + social.text">
+                                    <i :class="'fab fa-' + social.text"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    
+                    </div>
+
+                    <div class="col-3">
+                        <div class="title-box">
+                            <h5>
+                                Contact information
+                            </h5>
+                            <span class="underline colored"></span>
+                        </div>
+                        <div class="contact-box">
+                            <div>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>121 King Street, London United Kingdom</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-phone"></i>
+                                <span>1.800.458.556</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="title-box">
+                            <h5>
+                                Medical departments
+                            </h5>
+                            <span class="underline colored"></span>
+                        </div>
+                        <div class="departments-box">
+
+                            <ul class="departments-list">
+                                <li v-for="department in departmentsList">
+                                    <a :href="department.link">
+                                        <span class="arrow-icon">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </span>
+                                        <span class="text">
+                                            {{ department.name }}
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="white-btn link">
+                                View our departments
+                            </a>
+                        </div>
+                       
+                    </div>
+
+                </div>
+            </div>
         </footer>
     </div>
 

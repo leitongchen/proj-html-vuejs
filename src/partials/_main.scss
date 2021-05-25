@@ -1,22 +1,6 @@
 
 section {
     text-align: center;
-    padding: ($spacing*3) 0;
-
-    &.light-bg {
-
-        h1, h2, h3, h4, h5, h6 {
-            color: $title-color;
-        }
-        p, span {
-            color: $text-color;
-        }
-    }
-    &.dark-bg {
-        h1, h2, h3, h4, h5, h6, p, span {
-            color: white;
-        }
-    }
 }
 
 .title-container {
@@ -141,9 +125,7 @@ section {
             button {
                 width: 100%;
             }
-            ::placeholder {
-                color: white;
-            }
+            
         }
     }
 }

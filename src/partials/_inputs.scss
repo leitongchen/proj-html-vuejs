@@ -4,6 +4,10 @@ form {
 
     align-items: center;
     justify-content: space-between;
+
+    ::placeholder {
+        color: white;
+    }
 }
 
 input, textarea {
@@ -19,6 +23,7 @@ input, textarea {
     &:hover {
         border: 1px solid $input-hover;
     }
+   
 }
 
 input {

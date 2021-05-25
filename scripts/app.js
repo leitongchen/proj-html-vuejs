@@ -156,6 +156,46 @@ const app = new Vue({
                 name: "Color Power",
                 logo: "-4.png"
             }, 
+        ],
+        socialLinkList: [
+            {
+                text: "facebook-f", 
+                link: "www.facebook.com"
+            }, 
+            {
+                text: "twitter", 
+                link: "www.twitter.com"
+            }, 
+            {
+                text: "youtube", 
+                link: "www.youtube.com"
+            }, 
+            {
+                text: "instagram", 
+                link: "www.instagram.com"
+            }, 
+        ],
+        departmentsList: [
+            {
+                name: "Cardiology",
+                link: "#",
+            },
+            {
+                name: "Pediatrics",
+                link: "#",
+            },
+            {
+                name: "Diabets Care",
+                link: "#",
+            },
+            {
+                name: "Pre-Natal Care",
+                link: "#",
+            },
+            {
+                name: "Ultrasound Echocardiogram",
+                link: "#",
+            },
         ]
 
     },
