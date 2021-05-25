@@ -56,8 +56,7 @@ section {
             cursor: pointer;
 
             &:hover {
-                transform: scale(1.05);
-                box-shadow: 2px 2px 16px -1px lighten($text-color, 30%);
+               @include hover-scale-animation
             }
         }
     }
@@ -77,5 +76,44 @@ section {
 
     .services-box {
         padding: $spacing 0;
+    }
+}
+
+#section-4 {
+    background-image: url(../../public/imgs/bg-img/paralax-bg-tour-facilities.jpg);
+    background-size: cover;
+    padding-top: $spacing*4;
+    padding-bottom: 0;
+
+    .player-container {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+
+        img {
+            width: 80%;
+            height: 80%;
+            transition: transform $set-transition;  
+            
+            &:hover {
+                transform: scale(1.05);
+                // color: whitesmoke;
+            }
+        } 
+    }
+
+    @each $key, $value in $bg-colors {
+        .bg-color-#{$key} {
+            background-color: $value;
+        }
+    }
+
+    .facilities-box.row {
+
+        margin-top: $spacing*4;
+
+        >div {
+            padding: ($spacing*2) $spacing;
+        }
     }
 }

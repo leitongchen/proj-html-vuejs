@@ -102,6 +102,10 @@ h2 {
   margin-bottom: 20px;
 }
 
+.underline.white {
+  border-bottom: 1px solid white;
+}
+
 h3 {
   font-size: 32px;
 }
@@ -171,7 +175,7 @@ button.secondary-btn {
 button.secondary-btn:hover {
   border: 0;
   background-color: white;
-  color: #3697c3;
+  color: #3bafbf;
 }
 button.white-btn {
   color: #333c4e;
@@ -185,6 +189,7 @@ button.white-btn:hover {
 .btn-container {
   height: 37px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -365,4 +370,39 @@ section.dark-bg h1, section.dark-bg h2, section.dark-bg h3, section.dark-bg h4, 
 
 #section-3 .services-box {
   padding: 20px 0;
+}
+
+#section-4 {
+  background-image: url(/images/paralax-bg-tour-facilities.jpg?ac80513d9d75c05c5b7a0c7a2d7bae6c);
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 0;
+}
+#section-4 .player-container {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+#section-4 .player-container img {
+  width: 80%;
+  height: 80%;
+  transition: transform 0.3s;
+}
+#section-4 .player-container img:hover {
+  transform: scale(1.05);
+}
+#section-4 .bg-color-1 {
+  background-color: #3bafbf;
+}
+#section-4 .bg-color-2 {
+  background-color: #3697c3;
+}
+#section-4 .bg-color-3 {
+  background-color: #327ec7;
+}
+#section-4 .facilities-box.row {
+  margin-top: 80px;
+}
+#section-4 .facilities-box.row > div {
+  padding: 40px 20px;
 }
