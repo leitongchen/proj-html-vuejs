@@ -132,6 +132,10 @@ p.lead {
   color: white;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 .highlighted {
   color: #3bafbf;
 }
@@ -257,18 +261,25 @@ ul li a.btn:hover {
 
 form {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+}
+
+input, textarea {
+  padding: 10px 6.6666666667px;
+  border: 1px solid #88acab;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 8px;
+  background-color: transparent;
+  color: white;
+}
+input:hover, textarea:hover {
+  border: 1px solid #7c858f;
 }
 
 input {
-  padding: 10px 6.6666666667px;
-  border: 1px solid #88acab;
   height: 36px;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 8px;
-}
-input:hover {
-  border: 1px solid #7c858f;
 }
 
 header {
@@ -405,4 +416,49 @@ section.dark-bg h1, section.dark-bg h2, section.dark-bg h3, section.dark-bg h4, 
 }
 #section-4 .facilities-box.row > div {
   padding: 40px 20px;
+}
+
+#section-5 {
+  background-image: url(/images/make-an-appointment.jpg?d070a7dc963aa44513813a19ea07b743);
+  background-size: cover;
+}
+#section-5 .form-container {
+  min-width: 100px;
+  max-width: 60%;
+  margin: auto;
+}
+#section-5 .form-container form input {
+  width: 49%;
+  margin-bottom: 20px;
+}
+#section-5 .form-container form textarea {
+  width: 100%;
+}
+#section-5 .form-container form button {
+  width: 100%;
+}
+#section-5 .form-container form ::-moz-placeholder {
+  color: white;
+}
+#section-5 .form-container form :-ms-input-placeholder {
+  color: white;
+}
+#section-5 .form-container form ::placeholder {
+  color: white;
+}
+
+#section-6 {
+  background-image: url(/images/rgb-gradient-bar-for-logo-carrasel.jpg?a762f6613cf017fcc09737b68b7a755e);
+  padding: 0;
+}
+#section-6 .clients-logo-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section-6 .clients-logo-container img {
+  width: 200px;
+  height: 200px;
 }

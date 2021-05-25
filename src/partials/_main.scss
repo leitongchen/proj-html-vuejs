@@ -117,3 +117,52 @@ section {
         }
     }
 }
+
+#section-5 {
+    background-image: url(../../public/imgs/bg-img/make-an-appointment.jpg);
+    background-size: cover;
+
+    .form-container {
+        min-width: 100px;
+        max-width: 60%;
+        margin: auto;
+
+        form {
+
+            
+            input {
+                width: 49%;
+                margin-bottom: $spacing;
+            }
+            textarea {
+                width: 100%;
+
+            }
+            button {
+                width: 100%;
+            }
+            ::placeholder {
+                color: white;
+            }
+        }
+    }
+}
+
+#section-6 {
+    background-image: url(../../public/imgs/rgb-gradient-bar-for-logo-carrasel.jpg);
+    // max-height: 200px;
+    padding: 0;
+
+    .clients-logo-container {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}

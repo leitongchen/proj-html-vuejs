@@ -1,17 +1,26 @@
 form {
     display: flex;
+    flex-wrap: wrap;
+
     align-items: center;
+    justify-content: space-between;
 }
 
-input {
+input, textarea {
     padding: ($spacing/2) ($spacing/3);
     border: 1px solid $input-color;
-    height: 36px;
 
     font-family: $primary-font-stack;
     font-size: $font-size/2;
 
+    background-color: transparent;
+    color: white;
+
     &:hover {
         border: 1px solid $input-hover;
     }
+}
+
+input {
+    height: 36px;
 }

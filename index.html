@@ -235,7 +235,7 @@
                     </div>
                     <div class="col-3 bg-color-2">
                         <h4>
-                            Emergency Care
+                            Expert Diagnostics
                         </h4>
                         <img src="public/imgs/wave-divider.png" alt="wave icon">
                         <p>
@@ -249,7 +249,7 @@
                     </div>
                     <div class="col-3 bg-color-3">
                         <h4>
-                            Emergency Care
+                            Superb Rehabilitation
                         </h4>
                         <img src="public/imgs/wave-divider.png" alt="wave icon">
                         <p>
@@ -262,10 +262,48 @@
                         </div>
                     </div>
                 </div>
-
             </section>
+            <section id="section-5" class="dark-bg">
+                <div class="container">
 
-    
+                    <div class="title-container">
+                        <h3 class="capitalize">
+                            Make an appointment
+                        </h3>
+                        <div class="underline white">
+                        </div>
+                        <h4>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                        </h4>
+                    </div>
+
+                    <div class="form-container">
+                        <form action="">
+                            <input type="text" name="name" placeholder="Name*" required>
+                            <input type="text" name="email" placeholder="Email*" required>
+                            
+                            <input type="number" name="phone" placeholder="Phone Number">
+                            <input type="date" name="date" placeholder="Appointment Date">
+
+                            <textarea name="info" placeholder="How can we help?*" rows="5" required>
+                            </textarea>
+
+                            <button class="primary-btn">
+                                Make an appointment
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+            <section id="section-6">
+                <div class="clients-logo-container">
+
+                    <img v-for="client in clientsList" :src="'public/imgs/clients-logo/client-logos' + client.logo" alt="">
+
+                </div>
+            </section>
+            
     
     
     

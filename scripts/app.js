@@ -139,6 +139,24 @@ const app = new Vue({
                 description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.",
             },
         ],
+        clientsList: [
+            {
+                name: "Healthy",
+                logo: "-1.png"
+            }, 
+            {
+                name: "Health",
+                logo: "-2.png"
+            }, 
+            {
+                name: "Turbo Power",
+                logo: "-3.png"
+            }, 
+            {
+                name: "Color Power",
+                logo: "-4.png"
+            }, 
+        ]
 
     },
     methods: {

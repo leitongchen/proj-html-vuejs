@@ -95,6 +95,10 @@ p.lead {
     color: white;
 }
 
+.capitalize {
+    text-transform: capitalize;
+}
+
 .highlighted {
     color: $primary-color;
 }
