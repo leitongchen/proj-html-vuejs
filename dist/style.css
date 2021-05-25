@@ -129,7 +129,7 @@ h6 {
   text-transform: uppercase;
 }
 
-p, span {
+p {
   font-size: 12.3076923077px;
   font-weight: 300;
 }
@@ -499,6 +499,9 @@ footer .title-box {
 footer .title-box h5 {
   margin-bottom: 13.3333333333px;
 }
+footer span {
+  font-size: 12.3076923077px;
+}
 footer .underline.colored {
   border-bottom: 2px solid #3bafbf;
   margin: 0;
@@ -538,10 +541,12 @@ footer .departments-box li .arrow-icon {
   text-align: center;
   line-height: 20px;
   margin-bottom: 0;
+  margin-right: 6.6666666667px;
 }
 footer .departments-box li .arrow-icon i {
   font-size: 5.3333333333px;
 }
 footer .departments-box li span {
   line-height: 2.5;
+  text-transform: capitalize;
 }
