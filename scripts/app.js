@@ -11,7 +11,20 @@ const app = new Vue({
                 text: "about",
                 link: "#",
                 type: "link",
-                ddmenu: departmentsList,
+                ddmenu: [
+                    {
+                        text: "Our Story",
+                        link: "#",
+                    },
+                    {
+                        text: "Mission",
+                        link: "#",
+                    },
+                    {
+                        text: "Vision",
+                        link: "#",
+                    },
+                ],
                 ddMenuOpen: false,
             },
             {
@@ -32,6 +45,20 @@ const app = new Vue({
                 type: "btn",
             },            
         ],
+
+        userData: {
+            name: "",
+            email: "",
+            phone: null,
+            date: null,
+            message: "",
+            compiled: false,
+        },
+        formMessage: {
+            type: "",
+            message: "",
+        },
+
         ourDoctors: ourDoctors,
         healthServices: healthServices,
         clientsList: clientsList,
@@ -60,6 +87,40 @@ const app = new Vue({
             
             link.ddMenuOpen = false; 
             
+        },
+
+        onSendForm() {
+            
+            if (!this.userData.name || !this.userData.email || !this.userData.message) {
+                this.formMessage = {
+                    type: "error",
+                    message: "Name, email and message are required.",
+                } 
+                return
+
+            } else if (!Number.isNaN(this.userData.phone) && this.userData.phone) {
+                this.formMessage = {
+                    type: "error",
+                    message: "Phone number is not valid.",
+                } 
+                return
+            }
+
+           
+            this.userData = {
+                name: "",
+                email: "",
+                phone: null,
+                date: null,
+                message: "",
+                compiled: false,
+            }
+
+            this.userData.compiled = true;
+            this.formMessage = {
+                type: "success",
+                message: "Thank you for your message. It has been sent.",
+            } 
         }
     }
 

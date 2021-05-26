@@ -301,19 +301,33 @@
 
                     <div class="form-container">
                         <form action="">
-                            <input type="text" name="name" placeholder="Name*" required>
-                            <input type="text" name="email" placeholder="Email*" required>
-                            
-                            <input type="number" name="phone" placeholder="Phone Number">
-                            <input type="date" name="date" placeholder="Appointment Date">
+                            <input v-model="userData.name"
+                            type="text" name="name" placeholder="Name*" required>
 
-                            <textarea name="info" placeholder="How can we help?*" rows="5" required>
+                            <input v-model="userData.email"
+                            type="email" name="email" placeholder="Email*" required>
+                            
+                            <input v-model="userData.phone"
+                            type="tel" pattern="[0-9]{3}-[0-9]{7}" name="phone" placeholder="Phone Number">
+
+                            <input v-model="userData.date"
+                            type="date" name="date" placeholder="Appointment Date">
+
+                            <textarea v-model="userData.message"
+                            name="info" placeholder="How can we help?*" rows="5" required>
                             </textarea>
 
-                            <button class="primary-btn">
+                            <button class="primary-btn"
+                            @click.prevent="onSendForm()">
                                 Make an appointment
                             </button>
                         </form>
+                    </div>
+                    <div v-if="formMessage.message" class="form-message"
+                    :class="formMessage.type === 'success' ? 'success' : 'error'">
+                        <p>
+                            {{ formMessage.message }}
+                        </p>
                     </div>
 
                 </div>

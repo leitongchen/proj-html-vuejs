@@ -8,6 +8,7 @@ section {
     margin: auto;
 }
 
+// WELCOME SECTION
 #section-1 {
     
     .row {
@@ -21,6 +22,7 @@ section {
    
 }
 
+// OUR DOCTORS SECTION 
 #section-2 {
     background-color: $bg-light-gray;
 
@@ -56,6 +58,7 @@ section {
     }
 }
 
+// OUR HEALTH SERVICES SECTION
 #section-3 {
 
     .services-box {
@@ -68,6 +71,7 @@ section {
     }
 }
 
+// OUR FACILITIES SECTION
 #section-4 {
     background-image: url(../../public/imgs/bg-img/paralax-bg-tour-facilities.jpg);
     background-size: cover;
@@ -112,18 +116,22 @@ section {
     }
 }
 
+// MAKE AN APPOINTMENT FORM SECTION
 #section-5 {
     background-image: url(../../public/imgs/bg-img/make-an-appointment.jpg);
     background-size: cover;
 
-    .form-container {
+    .form-container,
+    .form-message {
         min-width: 100px;
         max-width: 60%;
         margin: auto;
+    }
 
+    .form-container {
+       
         form {
 
-            
             input {
                 width: 49%;
                 margin-bottom: $spacing;
@@ -139,8 +147,23 @@ section {
             
         }
     }
+
+    .form-message {
+        padding: $spacing 0;
+
+        p {
+            margin: 0;
+        }
+        &.success {
+            background-color: $form-message-color;
+        }
+        &.error {
+            background-color: $form-error-color;
+        }
+    }
 }
 
+// CLIENTS LOGO SECTION
 #section-6 {
     background-image: url(../../public/imgs/rgb-gradient-bar-for-logo-carrasel.jpg);
     padding: 0;

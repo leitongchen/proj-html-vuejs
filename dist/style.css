@@ -504,7 +504,8 @@ section {
   background-image: url(/images/make-an-appointment.jpg?d070a7dc963aa44513813a19ea07b743);
   background-size: cover;
 }
-#section-5 .form-container {
+#section-5 .form-container,
+#section-5 .form-message {
   min-width: 100px;
   max-width: 60%;
   margin: auto;
@@ -519,6 +520,18 @@ section {
 #section-5 .form-container form button {
   width: 100%;
   height: 36px;
+}
+#section-5 .form-message {
+  padding: 20px 0;
+}
+#section-5 .form-message p {
+  margin: 0;
+}
+#section-5 .form-message.success {
+  background-color: rgba(136, 172, 171, 0.5);
+}
+#section-5 .form-message.error {
+  background-color: rgba(255, 111, 92, 0.5);
 }
 
 #section-6 {

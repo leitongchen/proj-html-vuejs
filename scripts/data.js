@@ -35,7 +35,7 @@ const ourDoctors = [
             },
             {
                 text: "instagram", 
-                link: "http://www.instagram.com"
+                link: "#"
             },
         ]
     },
@@ -55,7 +55,7 @@ const ourDoctors = [
             },
             {
                 text: "instagram", 
-                link: "http://www.instagram.com"
+                link: "#"
             },
         ]
     },
