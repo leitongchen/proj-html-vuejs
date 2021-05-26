@@ -319,7 +319,12 @@
 
                             <button class="primary-btn"
                             @click.prevent="onSendForm()">
-                                Make an appointment
+                                <span v-if="!sendingForm">Make an appointment</span>
+                                <div v-else class="loading-dots">
+                                    <span class="bounce-1"></span>
+                                    <span class="bounce-2"></span>
+                                    <span class="bounce-3"></span>
+                                </div>
                             </button>
                         </form>
                     </div>
@@ -387,11 +392,11 @@
                         <div class="contact-box">
                             <div>
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>121 King Street, London United Kingdom</span>
+                                <span class="p-style">121 King Street, London United Kingdom</span>
                             </div>
                             <div>
                                 <i class="fas fa-phone"></i>
-                                <span>1.800.458.556</span>
+                                <span class="p-style">1.800.458.556</span>
                             </div>
                         </div>
                     </div>

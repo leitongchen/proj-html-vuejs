@@ -52,8 +52,8 @@ const app = new Vue({
             phone: null,
             date: null,
             message: "",
-            compiled: false,
         },
+        sendingForm: false,
         formMessage: {
             type: "",
             message: "",
@@ -66,9 +66,6 @@ const app = new Vue({
         departmentsList: departmentsList,
 
 
-    },
-    computed: {
-     
     },
     methods: {
         onLinkClick(link, event) {
@@ -85,8 +82,7 @@ const app = new Vue({
         focusLost(link, event) {
             console.log("chiude")
             
-            link.ddMenuOpen = false; 
-            
+            link.ddMenuOpen = false;
         },
 
         onSendForm() {
@@ -106,21 +102,27 @@ const app = new Vue({
                 return
             }
 
-           
-            this.userData = {
-                name: "",
-                email: "",
-                phone: null,
-                date: null,
-                message: "",
-                compiled: false,
-            }
+            this.sendingForm = true; 
+            const v = this;
+            setTimeout(function() {
+                v.sendingForm = false; 
 
-            this.userData.compiled = true;
-            this.formMessage = {
-                type: "success",
-                message: "Thank you for your message. It has been sent.",
-            } 
+                v.userData = {
+                    name: "",
+                    email: "",
+                    phone: null,
+                    date: null,
+                    message: "",
+                    compiled: false,
+                }
+                v.formMessage = {
+                    type: "success",
+                    message: "Thank you for your message. It has been sent.",
+                }  
+
+            }, 2000)
+           
+            
         },
         closePopup() {
 
