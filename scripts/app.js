@@ -86,7 +86,8 @@ const app = new Vue({
         },
 
         onSendForm() {
-            
+            const phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
             if (!this.userData.name || !this.userData.email || !this.userData.message) {
                 this.formMessage = {
                     type: "error",
@@ -94,10 +95,10 @@ const app = new Vue({
                 } 
                 return
 
-            } else if (Number.isNaN(this.userData.phone) && this.userData.phone) {
+            } else if (!this.userData.phone.match(phoneNum) && this.userData.phone) {
                 this.formMessage = {
                     type: "error",
-                    message: "Phone number is not valid.",
+                    message: "Phone number is not valid. Please use this format xxx xxx xxxx",
                 } 
                 return
             }
