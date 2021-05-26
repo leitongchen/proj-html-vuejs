@@ -94,7 +94,7 @@ const app = new Vue({
                 } 
                 return
 
-            } else if (!Number.isNaN(this.userData.phone) && this.userData.phone) {
+            } else if (Number.isNaN(this.userData.phone) && this.userData.phone) {
                 this.formMessage = {
                     type: "error",
                     message: "Phone number is not valid.",
