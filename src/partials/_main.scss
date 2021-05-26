@@ -168,27 +168,7 @@ section {
             background-color: $form-error-color;
         }
 
-        .close-message-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            width: 20px;
-            height: 20px;
-
-            border: 1px solid white;
-            color: white;
-
-            position: absolute;
-            top: 0;
-            right: 0;
-
-            cursor: pointer;
-
-            i {
-                font-size: $font-size/2;
-            }
-        }
+        
     }
 }
 

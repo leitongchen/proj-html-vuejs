@@ -24,7 +24,9 @@
                     </div>
         
                     <nav class="nav-header-container">
-                        <ul>
+
+                        <ul class="navbar-list"
+                        :class="{'nav-hidden': !showNavbar}">
                             <li class="single-link" 
                             v-for="(link, index) in navLinksList">
 
@@ -39,7 +41,8 @@
                                 </a>
 
                                 <!-- DROP DOWN MENU -->
-                                <div v-if="link.ddmenu" :class="{hidden: !link.ddMenuOpen}">
+                                <div class="dd-menu"
+                                v-if="link.ddmenu" :class="{hidden: !link.ddMenuOpen}">
                                     <ul class="child-menu">
                                         <li v-for="ddLink in link.ddmenu">
                                             <a class="dd_menu_a"
@@ -49,9 +52,26 @@
                                         </li>
                                     </ul>
                                 </div>
-
                             </li>
+                            <span class="close-icon"
+                            @click="closeNav($event)"
+                            v-if="showNavbar">
+                                <i class="fas fa-times"></i>
+                            </span>
+
                         </ul>
+                        <div class="toggle-menu"
+                        @click="onClickShowNav()"
+                        tabindex="-1">
+
+                        <!-- v-on:blur.stop="closeNav($event)" -->
+                            <div class="wrap">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
                     </nav>
                 </div>
     
@@ -333,7 +353,7 @@
                         <p>
                             {{ formMessage.message }}
                         </p>
-                        <span class="close-message-icon"
+                        <span class="close-icon"
                         @click="closePopup()">
                             <i class="fas fa-times"></i>
                         </span>

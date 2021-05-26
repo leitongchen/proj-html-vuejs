@@ -95,6 +95,7 @@ header {
                     &:hover {
                         color: white;
                     }
+                    
                 }
 
                 &:hover {
@@ -108,7 +109,116 @@ header {
             display: none;
         }
     }
+}
 
-    
-    
+
+@media all and (max-width: 768px) {
+
+    header {
+
+        .nav-header-container {
+            position: relative;
+
+            .navbar-list {
+            
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                background-color: white;
+
+                width: 300px;
+
+                &.nav-hidden {
+                    display: none;
+                }
+
+                li {
+                    
+                    display: block;
+                    position: relative;
+                    &.single-link {
+                        border-bottom: 1px solid $bg-light-gray;
+
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+
+                        &:hover {
+                            background-color: $primary-color;
+                        }
+                    }
+                }
+
+                li a {
+                    color: $text-color;
+                    width: 100%;
+                    padding: $spacing;
+
+                    &:hover {
+                        color: white;
+                    }
+                    &.btn {
+                        color: white;
+                        border-radius: 0;
+                    }
+                }
+
+                .close-icon {
+                    color: $text-color;
+                    border: 1px solid $text-color;
+                }
+
+                .dd-menu {
+                    width: 150px;
+                    position: absolute;
+                    left: -180px;
+                    top: 0;
+
+                    .child-menu {
+
+                        &::before {
+                            border-width: 9px 0 9px 7px;
+                            border-color: transparent transparent  transparent white;
+            
+                            position: absolute;
+                            left: 100%;
+                            right: 0;
+                            top: 5px;
+                        }
+                    }
+                }
+            }
+
+            .toggle-menu {
+
+                height: 30px;
+                width: 30px;
+
+                background-color: rgba(255,255,255, .5);
+                border-radius: 5px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    display: block;
+                    background-color: white;
+                    height: 2px;
+                    width: 20px;
+
+                    border-radius: 1px;
+                    margin-bottom: 6px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+
 }

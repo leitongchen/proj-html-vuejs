@@ -1,6 +1,12 @@
 const app = new Vue({
     el: "#app",
     data: {
+        ourDoctors: ourDoctors,
+        healthServices: healthServices,
+        clientsList: clientsList,
+        socialLinkList: socialLinkList,
+        departmentsList: departmentsList,
+
         navLinksList: [
             {
                 text: "home",
@@ -46,6 +52,8 @@ const app = new Vue({
             },            
         ],
 
+        showNavbar: false,
+
         userData: {
             name: "",
             email: "",
@@ -59,12 +67,7 @@ const app = new Vue({
             message: "",
         },
 
-        ourDoctors: ourDoctors,
-        healthServices: healthServices,
-        clientsList: clientsList,
-        socialLinkList: socialLinkList,
-        departmentsList: departmentsList,
-
+        
 
     },
     methods: {
@@ -81,8 +84,16 @@ const app = new Vue({
         },
         focusLost(link, event) {
             console.log("chiude")
-            
-            link.ddMenuOpen = false;
+            if(link) {
+                link.ddMenuOpen = false;
+            }
+        },
+
+        onClickShowNav() {
+            this.showNavbar = true; 
+        },
+        closeNav(event) {
+            this.showNavbar = false; 
         },
 
         onSendForm() {
@@ -131,7 +142,9 @@ const app = new Vue({
                 type: "",
                 message: "",
             } 
-        }
+        },
+
+       
     }
 
 })
