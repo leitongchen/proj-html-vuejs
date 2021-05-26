@@ -106,14 +106,19 @@ const app = new Vue({
                 } 
                 return
 
-            } else if (!this.userData.phone.match(phoneNum) && this.userData.phone) {
-                this.formMessage = {
-                    type: "error",
-                    message: "Phone number is not valid. Please use this format xxx xxx xxxx",
-                } 
-                return
-            }
+            } 
+            
+            if (this.userData.phone) {
 
+                if(!this.userData.phone.match(phoneNum)) {
+                    this.formMessage = {
+                        type: "error",
+                        message: "Phone number is not valid. Please use this format xxx xxx xxxx",
+                    } 
+                    return
+                }
+            }
+            
             this.sendingForm = true; 
             const v = this;
             setTimeout(function() {
