@@ -28,8 +28,7 @@
                             <li class="single-link" 
                             v-for="(link, index) in navLinksList">
 
-                                <a class="a_parent"
-                                :href="link.link" :class="{btn: link.type === 'btn'}"
+                                <a :href="link.link" :class="{btn: link.type === 'btn'}"
                                 @click="onLinkClick(link, $event)"
                                 v-on:blur.stop="focusLost(link, $event)"
                                 tabindex="-1">
@@ -168,7 +167,7 @@
 
                                 <ul v-if="doctor.socialLinks">
                                     <li v-for="social in doctor.socialLinks">
-                                        <a :href="social.link" :class="'social-icon icon-' + social.text">
+                                        <a :href="social.link" :class="'social-icon icon-' + social.text" target="_blank">
                                             <i :class="'fab fa-' + social.text"></i>
                                         </a>
                                     </li>
@@ -332,7 +331,7 @@
         </main>
     
         <footer>
-            <div class="container light-bg">
+            <div class="footer-content container light-bg">
                 <div class="row">
 
                     <div class="col-3">
@@ -405,9 +404,18 @@
                                 View our departments
                             </a>
                         </div>
-                       
                     </div>
+                </div>
+            </div>
 
+            <div class="copyright light-bg">
+                <div class="container">
+                    <div class="copyright-text">
+                        &#169; Copyright 2012-2021
+                        <span>&#124;</span> Avada Theme by Theme Fusion 
+                        <span>&#124;</span> All Rights Reserved
+                        <span>&#124;</span> Powered by <a href="#" target="_blank">WordPress</a>
+                    </div>
                 </div>
             </div>
         </footer>

@@ -18,7 +18,7 @@
   margin-right: auto;
 }
 
-section, footer {
+section, .footer-content {
   padding: 60px 0;
 }
 
@@ -593,4 +593,22 @@ footer .departments-box li .arrow-icon i {
 footer .departments-box li span {
   line-height: 2.5;
   text-transform: capitalize;
+}
+footer .copyright {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+footer .copyright .copyright-text, footer .copyright .copyright-text a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  color: #747474;
+}
+footer .copyright .copyright-text a, footer .copyright .copyright-text a a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+}
+footer .copyright .copyright-text span, footer .copyright .copyright-text a span {
+  margin: 5px;
 }

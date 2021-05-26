@@ -11,11 +11,11 @@ const ourDoctors = [
             },
             {
                 text: "twitter", 
-                link: "#"
+                link: "http://www.twitter.com"
             },
             {
                 text: "instagram", 
-                link: "#"
+                link: "http://www.instagram.com"
             },
         ]
     },
@@ -27,15 +27,15 @@ const ourDoctors = [
         socialLinks: [
             {
                 text: "facebook-f", 
-                link: "#"
+                link: "http://www.facebook.com"
             },
             {
                 text: "twitter", 
-                link: "#"
+                link: "http://www.twitter.com"
             },
             {
                 text: "instagram", 
-                link: "#"
+                link: "http://www.instagram.com"
             },
         ]
     },
@@ -47,15 +47,15 @@ const ourDoctors = [
         socialLinks: [
             {
                 text: "facebook-f", 
-                link: "#"
+                link: "http://www.facebook.com"
             },
             {
                 text: "twitter", 
-                link: "#"
+                link: "http://www.twitter.com"
             },
             {
                 text: "instagram", 
-                link: "#"
+                link: "http://www.instagram.com"
             },
         ]
     },
