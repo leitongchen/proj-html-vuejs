@@ -63,10 +63,28 @@ header {
             flex-direction: column;
             z-index: 10;
 
+            &::before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width:  0 9px 8px 9px;
+                border-color: transparent transparent white transparent;
+
+                position: relative;
+                left: 1rem;
+            }
+
             li {
                 min-width: 150px;
                 background-color: white;
                 margin: 0;
+                border-bottom: 1px solid $bg-light-gray;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
                 a {
                     width: 100%;
                     color: $text-color;
