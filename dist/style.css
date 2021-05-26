@@ -523,6 +523,7 @@ section {
 }
 #section-5 .form-message {
   padding: 20px 0;
+  position: relative;
 }
 #section-5 .form-message p {
   margin: 0;
@@ -532,6 +533,21 @@ section {
 }
 #section-5 .form-message.error {
   background-color: rgba(255, 111, 92, 0.5);
+}
+#section-5 .form-message .close-message-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+#section-5 .form-message .close-message-icon i {
+  font-size: 8px;
 }
 
 #section-6 {
@@ -621,6 +637,9 @@ footer .copyright .copyright-text a, footer .copyright .copyright-text a a {
   text-transform: capitalize;
   text-decoration: none;
   font-weight: 500;
+}
+footer .copyright .copyright-text a:hover, footer .copyright .copyright-text a a:hover {
+  text-decoration: underline;
 }
 footer .copyright .copyright-text span, footer .copyright .copyright-text a span {
   margin: 5px;

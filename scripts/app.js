@@ -121,6 +121,13 @@ const app = new Vue({
                 type: "success",
                 message: "Thank you for your message. It has been sent.",
             } 
+        },
+        closePopup() {
+
+            this.formMessage = {
+                type: "",
+                message: "",
+            } 
         }
     }
 
