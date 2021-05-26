@@ -26,10 +26,10 @@
                     <nav class="nav-header-container">
                         <ul>
                             <li class="single-link" 
-                            v-for="link in navLinksList" 
+                            v-for="link in navLinksList"
                             @click="onLinkClick($event)"
-                            v-on:blur="focusLost($event)"
-                            tabindex="0">
+                            v-on:blur.stop="focusLost($event)"
+                            tabindex="-1">
 
 
                                 <a :href="link.link" :class="{btn: link.type === 'btn'}">
@@ -37,11 +37,11 @@
 
                                     <i v-if="link.childs" class="fas fa-chevron-down"></i>
                                 </a>
-                                <div v-if="link.childs" :class="{hidden: !childMenu}">
+                                <div v-if="link.childs" :class="{hidden: !ddMenuOpen}">
                                     <ul class="child-menu">
-                                        <li v-for="childLink in link.childs">
-                                            <a :href="childLink.link">
-                                                {{ childLink.text }}
+                                        <li v-for="ddLink in link.ddmenu">
+                                            <a :href="ddLink.link">
+                                                {{ ddLink.text }}
                                             </a>
                                         </li>
                                     </ul>
@@ -336,7 +336,7 @@
 
                         <ul>
                             <li v-for="social in socialLinkList">
-                                <a :href="social.link" :class="'social-icon icon-' + social.text">
+                                <a :href="social.link" :class="'social-icon icon-' + social.text" target="_blank">
                                     <i :class="'fab fa-' + social.text"></i>
                                 </a>
                             </li>
@@ -379,7 +379,7 @@
                                             <i class="fas fa-chevron-right"></i>
                                         </span>
                                         <span class="text">
-                                            {{ department.name }}
+                                            {{ department.text }}
                                         </span>
                                     </a>
                                 </li>
@@ -396,6 +396,7 @@
         </footer>
     </div>
 
+    <script src="scripts/data.js"></script>
     <script src="scripts/app.js"></script>
 </body>
 </html>
