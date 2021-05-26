@@ -11,36 +11,15 @@ const app = new Vue({
                 text: "about",
                 link: "#",
                 type: "link",
+                ddmenu: departmentsList,
+                ddMenuOpen: false,
             },
             {
                 text: "departments",
                 link: "#",
                 type: "link",
-                childs: true,
                 ddmenu: departmentsList,
-                /*
-                ddmenu: [
-                    {
-                        text: "Cardiology",
-                        link: "#",
-                    },
-                    {
-                        text: "Pediatrics",
-                        link: "#",
-                    },
-                    {
-                        text: "Diabets Care",
-                        link: "#",
-                    },
-                    {
-                        text: "Pre-Natal Care",
-                        link: "#",
-                    },
-                    {
-                        text: "Ultrasound Echocardiogram",
-                        link: "#",
-                    },
-                ] */
+                ddMenuOpen: false,
             },
             {
                 text: "articles",
@@ -59,25 +38,27 @@ const app = new Vue({
         socialLinkList: socialLinkList,
         departmentsList: departmentsList,
 
-        ddMenuOpen: false,
 
     },
     computed: {
      
     },
     methods: {
-        onLinkClick(event) {
+        onLinkClick(link, event) {
             console.log("apre")
+            
+            if (link.ddmenu) {
+                link.ddMenuOpen = !link.ddMenuOpen;
+            }
 
-            this.ddMenuOpen = !this.ddMenuOpen;
-            if (this.ddMenuOpen) {
+            if (link.ddMenuOpen) {
                 event.currentTarget.focus()
             }
         },
-        focusLost(event) {
+        focusLost(link, event) {
             console.log("chiude")
             
-            this.ddMenuOpen = false; 
+            link.ddMenuOpen = false; 
             
         }
     }

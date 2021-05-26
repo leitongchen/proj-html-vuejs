@@ -26,23 +26,25 @@
                     <nav class="nav-header-container">
                         <ul>
                             <li class="single-link" 
-                            v-for="link in navLinksList"
-                            @click="onLinkClick($event)"
-                            v-on:blur.stop="focusLost($event)"
-                            tabindex="-1">
+                            v-for="(link, index) in navLinksList">
 
+                                <a class="a_parent"
+                                :href="link.link" :class="{btn: link.type === 'btn'}"
+                                @click="onLinkClick(link, $event)"
+                                v-on:blur.stop="focusLost(link, $event)"
+                                tabindex="-1">
 
-                                <a :href="link.link" :class="{btn: link.type === 'btn'}">
                                     {{ link.text }}
 
-                                    <i v-if="link.childs" class="fas fa-chevron-down"></i>
+                                    <i v-if="link.ddmenu" class="fas fa-chevron-down"></i>
                                 </a>
 
                                 <!-- DROP DOWN MENU -->
-                                <div v-if="link.childs" :class="{hidden: !ddMenuOpen}">
+                                <div v-if="link.ddmenu" :class="{hidden: !link.ddMenuOpen}">
                                     <ul class="child-menu">
                                         <li v-for="ddLink in link.ddmenu">
-                                            <a :href="ddLink.link">
+                                            <a class="dd_menu_a"
+                                            :href="ddLink.link">
                                                 {{ ddLink.text }}
                                             </a>
                                         </li>
