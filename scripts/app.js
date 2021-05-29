@@ -42,7 +42,7 @@ const app = new Vue({
             },
             {
                 text: "articles",
-                link: "#",
+                link: "https://www.w3schools.com/",
                 type: "link",
             },
             {
@@ -72,50 +72,81 @@ const app = new Vue({
 
     },
     methods: {
-        // on click open the dd menu navbar primary links
+        // click on nav link a_parent open the relative dd menu (if link.ddmenu exist)
         onLinkClick(link, event) {
-            console.log("apre")
+
+            console.log("funzione ddmenu? ");
             
             if (link.ddmenu) {
-                link.ddMenuOpen = !link.ddMenuOpen;
-            }
+                console.log("Apre o chiude ddmenu")
 
-            // if (link.ddMenuOpen) {
-            //     event.currentTarget.focus()
-            // }
+                link.ddMenuOpen = !link.ddMenuOpen;
+
+            } else if (!link.ddmenu) {
+
+                // when navbar is collapsed, showNavbar is set on false: toggle nav is hidden
+                // and user click on a link a_parent without link.ddmenu
+                // toggle navbar is setted to false and will disappear
+                setTimeout(() => {
+                    this.showNavbar = false; 
+                }, 100);
+            }
         },
         focusLost(link, index, event) {
             console.log("focusLost entra")
 
             setTimeout(() => {
-                console.log('entra in setTimeout')
+                console.log('entra in setTimeout di focusLost()')
                 
-                if(!event.relatedTarget || event.relatedTarget.className === "a_parent" || event.relatedTarget.className === "dd_menu_a") {
+                // if user clicked on something that don't have a focus
+                // or if it clicked on another link (menu voice of the nav)
+                // the current ddMenu will close
+                if(!event.relatedTarget || event.relatedTarget.localName == "a") {
                     
                     console.log("chiude ddMenu")
                     
                     link.ddMenuOpen = false;
+
+                    // showNavbar will set on false and will be hidden if user click on
+                    // - a menu voice (link a) that don't have ddmenu
+                    // - on something without focus
+                    // - on something with focus (link a) 
+                    if (!link.ddmenu || !event.relatedTarget || event.relatedTarget.className == "dd_menu_a") {
+                        console.log("false to showNavbar")
+
+                        this.showNavbar = false; 
+                    }
                 }
-
-            }, 100)
-            // if(link && !event.relatedTarget) {
-
-            //     link.ddMenuOpen = false;
-            // }
-            // if (!event.relatedTarget) {
-            //     this.showNavbar = false; 
-            // }
-            
+            }, 100)            
         },
 
         // on click of hamburger menu, navbar show up
         onClickShowNav(event) {
+            console.log("apre toggle nav")
+            this.showNavbar = !this.showNavbar;
 
-            this.showNavbar = true; 
+            if (event.currentTarget) {
+                event.currentTarget.focus()
+            }
         },
-        closeNav(event) {
+        lostFocusToggle(event) {
+            console.log("entra in funzione lostFocusToggle()")
+
+            setTimeout(() => {
+                if(!event.relatedTarget || event.relatedTarget.className !== "a_parent") {
+                        
+                    console.log("chiude toggle menu lostFocusToggle()")
+                    
+                    this.showNavbar = false; 
+                }
+            
+            }, 100)
+        },
+        closeNav() {
+            console.log("chiude toggle nav")
             this.showNavbar = false; 
         },
+
 
         onSendForm() {
             const phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;

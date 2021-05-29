@@ -47,8 +47,7 @@
                                     <ul class="child-menu">
                                         <li v-for="ddLink in link.ddmenu">
                                             <a class="dd_menu_a"
-                                            :href="ddLink.link"
-                                            target="_blank">
+                                            :href="ddLink.link" target="_blank">
                                                 {{ ddLink.text }}
                                             </a>
                                         </li>
@@ -56,7 +55,7 @@
                                 </div>
                             </li>
                             <span class="close-icon"
-                            @click="closeNav($event)"
+                            @click="closeNav()"
                             v-if="showNavbar">
                                 <i class="fas fa-times"></i>
                             </span>
@@ -64,7 +63,7 @@
                         </ul>
                         <div class="toggle-menu"
                         @click="onClickShowNav($event)"
-                        @blur="focusLost($event)"
+                        @blur="lostFocusToggle($event)"
                         tabindex="-1">
 
                         <!-- v-on:blur.stop="closeNav($event)" -->
