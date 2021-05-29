@@ -28,11 +28,12 @@
                         <ul class="navbar-list"
                         :class="{'nav-hidden': !showNavbar}">
                             <li class="single-link" 
-                            v-for="(link, index) in navLinksList">
+                            v-for="(link, index) in navLinksList" :key="link.text">
 
-                                <a :href="link.link" :class="{btn: link.type === 'btn'}"
-                                @click="onLinkClick(link, $event)"
-                                v-on:blur.stop="focusLost(link, $event)"
+                                <a :href="link.link" class="a_parent"
+                                :class="{btn: link.type === 'btn'}"
+                                @click.stop="onLinkClick(link, $event)"
+                                v-on:blur.stop="focusLost(link, index, $event)"
                                 tabindex="-1">
 
                                     {{ link.text }}
@@ -46,7 +47,8 @@
                                     <ul class="child-menu">
                                         <li v-for="ddLink in link.ddmenu">
                                             <a class="dd_menu_a"
-                                            :href="ddLink.link">
+                                            :href="ddLink.link"
+                                            target="_blank">
                                                 {{ ddLink.text }}
                                             </a>
                                         </li>
@@ -61,7 +63,8 @@
 
                         </ul>
                         <div class="toggle-menu"
-                        @click="onClickShowNav()"
+                        @click="onClickShowNav($event)"
+                        @blur="focusLost($event)"
                         tabindex="-1">
 
                         <!-- v-on:blur.stop="closeNav($event)" -->

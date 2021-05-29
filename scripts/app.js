@@ -54,6 +54,7 @@ const app = new Vue({
 
         showNavbar: false,
 
+        // FORM DATA
         userData: {
             name: "",
             email: "",
@@ -71,6 +72,7 @@ const app = new Vue({
 
     },
     methods: {
+        // on click open the dd menu navbar primary links
         onLinkClick(link, event) {
             console.log("apre")
             
@@ -78,18 +80,37 @@ const app = new Vue({
                 link.ddMenuOpen = !link.ddMenuOpen;
             }
 
-            if (link.ddMenuOpen) {
-                event.currentTarget.focus()
-            }
+            // if (link.ddMenuOpen) {
+            //     event.currentTarget.focus()
+            // }
         },
-        focusLost(link, event) {
-            console.log("chiude")
-            if(link) {
-                link.ddMenuOpen = false;
-            }
+        focusLost(link, index, event) {
+            console.log("focusLost entra")
+
+            setTimeout(() => {
+                console.log('entra in setTimeout')
+                
+                if(!event.relatedTarget || event.relatedTarget.className === "a_parent" || event.relatedTarget.className === "dd_menu_a") {
+                    
+                    console.log("chiude ddMenu")
+                    
+                    link.ddMenuOpen = false;
+                }
+
+            }, 100)
+            // if(link && !event.relatedTarget) {
+
+            //     link.ddMenuOpen = false;
+            // }
+            // if (!event.relatedTarget) {
+            //     this.showNavbar = false; 
+            // }
+            
         },
 
-        onClickShowNav() {
+        // on click of hamburger menu, navbar show up
+        onClickShowNav(event) {
+
             this.showNavbar = true; 
         },
         closeNav(event) {
@@ -141,6 +162,8 @@ const app = new Vue({
            
             
         },
+
+        // make form message disappear
         closePopup() {
 
             this.formMessage = {

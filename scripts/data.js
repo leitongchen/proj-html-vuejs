@@ -35,7 +35,7 @@ const ourDoctors = [
             },
             {
                 text: "instagram", 
-                link: "#"
+                link: "http://www.instagram.com"
             },
         ]
     },
@@ -55,7 +55,7 @@ const ourDoctors = [
             },
             {
                 text: "instagram", 
-                link: "#"
+                link: "http://www.instagram.com"
             },
         ]
     },
@@ -143,14 +143,14 @@ const departmentsList = [
     },
     {
         text: "Diabets Care",
-        link: "#",
+        link: "https://www.w3schools.com/",
     },
     {
         text: "Pre-Natal Care",
-        link: "#",
+        link: "https://www.w3schools.com/",
     },
     {
         text: "Ultrasound Echocardiogram",
-        link: "#",
+        link: "https://www.w3schools.com/",
     },
 ];

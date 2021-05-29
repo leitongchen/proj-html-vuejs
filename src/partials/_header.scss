@@ -137,16 +137,16 @@ header {
                     
                     display: block;
                     position: relative;
+
                     &.single-link {
                         border-bottom: 1px solid $bg-light-gray;
-
-                        &:last-child {
-                            border-bottom: 0;
-                        }
 
                         &:hover {
                             background-color: $primary-color;
                         }
+                    }
+                    &:last-child {
+                        border-bottom: 0;
                     }
                 }
 

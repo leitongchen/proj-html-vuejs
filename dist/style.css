@@ -497,11 +497,11 @@ header .hero-text {
   header .nav-header-container .navbar-list li.single-link {
     border-bottom: 1px solid #f7f7f7;
   }
-  header .nav-header-container .navbar-list li.single-link:last-child {
-    border-bottom: 0;
-  }
   header .nav-header-container .navbar-list li.single-link:hover {
     background-color: #3bafbf;
+  }
+  header .nav-header-container .navbar-list li:last-child {
+    border-bottom: 0;
   }
   header .nav-header-container .navbar-list li a {
     color: #747474;
