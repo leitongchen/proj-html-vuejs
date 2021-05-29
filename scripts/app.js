@@ -110,7 +110,7 @@ const app = new Vue({
                     // showNavbar will set on false and will be hidden if user click on
                     // - a menu voice (link a) that don't have ddmenu
                     // - on something without focus
-                    // - on something with focus (link a) 
+                    // - on a link from the ddmenu (dd_menu_a)
                     if (!link.ddmenu || !event.relatedTarget || event.relatedTarget.className == "dd_menu_a") {
                         console.log("false to showNavbar")
 
@@ -120,7 +120,7 @@ const app = new Vue({
             }, 100)            
         },
 
-        // on click of hamburger menu, navbar show up
+        // on click on hamburger menu for navbar showing or hiding
         onClickShowNav(event) {
             console.log("apre toggle nav")
             this.showNavbar = !this.showNavbar;
@@ -133,14 +133,19 @@ const app = new Vue({
             console.log("entra in funzione lostFocusToggle()")
 
             setTimeout(() => {
+
+                // if user click on 
+                // - not a link 
+                // - related target is not "a_parent"
+                // if related target is an a_parent need to check if there's a ddmenu 
+                // onLinkClick() will be recalled
                 if(!event.relatedTarget || event.relatedTarget.className !== "a_parent") {
                         
                     console.log("chiude toggle menu lostFocusToggle()")
                     
                     this.showNavbar = false; 
                 }
-            
-            }, 100)
+            }, 100);
         },
         closeNav() {
             console.log("chiude toggle nav")
@@ -160,8 +165,10 @@ const app = new Vue({
 
             } 
             
+            // if user input on phone number 
             if (this.userData.phone) {
-
+                // if phone number doesn't match the expression 
+                // return an error msg
                 if(!this.userData.phone.match(phoneNum)) {
                     this.formMessage = {
                         type: "error",
@@ -171,11 +178,14 @@ const app = new Vue({
                 }
             }
             
+            // when sendingForm is true
+            // an animation occurs
             this.sendingForm = true; 
             const v = this;
             setTimeout(function() {
                 v.sendingForm = false; 
 
+                // clean the form 
                 v.userData = {
                     name: "",
                     email: "",
@@ -184,6 +194,8 @@ const app = new Vue({
                     message: "",
                     compiled: false,
                 }
+
+                // set an success message to print
                 v.formMessage = {
                     type: "success",
                     message: "Thank you for your message. It has been sent.",
@@ -193,10 +205,8 @@ const app = new Vue({
            
             
         },
-
         // make form message disappear
         closePopup() {
-
             this.formMessage = {
                 type: "",
                 message: "",
