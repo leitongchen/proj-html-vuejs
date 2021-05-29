@@ -38,7 +38,7 @@
 
                                     {{ link.text }}
 
-                                    <i v-if="link.ddmenu" class="fas fa-chevron-down"></i>
+                                    <i v-if="link.ddmenu" class="fas fa-chevron-down" :class="{'open-rotation rotation': link.ddMenuOpen, 'return-rotation rotation': !link.ddMenuOpen}"></i>
                                 </a>
 
                                 <!-- DROP DOWN MENU -->
