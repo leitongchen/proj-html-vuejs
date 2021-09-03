@@ -44,6 +44,11 @@ $form-error-color: rgba(255, 111, 92, 0.5);
 
 
 // social networks colors
+// if using on icons 
+/* 
+use [.social-icon] for social networks btns
+use [.icon-${sn name}] as well for the associated color
+*/ 
 $sm-logo-colors: 
     ("youtube": #cd201f,
     "instagram": #3f729b,

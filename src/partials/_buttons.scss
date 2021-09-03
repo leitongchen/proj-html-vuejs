@@ -125,6 +125,7 @@ ul {
             line-height: inherit;
         }
     }
+    
     // cycle assigning the right color for each social network link
     @each $logo, $color in $sm-logo-colors {
         .icon-#{$logo} {

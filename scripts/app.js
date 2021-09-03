@@ -93,17 +93,13 @@ const app = new Vue({
             }
         },
         focusLost(link, index, event) {
-            console.log("focusLost entra")
 
             setTimeout(() => {
-                console.log('entra in setTimeout di focusLost()')
                 
                 // if user clicked on something that don't have a focus
                 // or if it clicked on another link (menu voice of the nav)
                 // the current ddMenu will close
                 if(!event.relatedTarget || event.relatedTarget.localName == "a") {
-                    
-                    console.log("chiude ddMenu")
                     
                     link.ddMenuOpen = false;
 
@@ -112,7 +108,6 @@ const app = new Vue({
                     // - on something without focus
                     // - on a link from the ddmenu (dd_menu_a)
                     if (!link.ddmenu || !event.relatedTarget || event.relatedTarget.className == "dd_menu_a") {
-                        console.log("false to showNavbar")
 
                         this.showNavbar = false; 
                     }
